@@ -15,7 +15,7 @@ prediction = ImageClassification()
 # prediction.setModelPath(os.path.join(execution_path, "ImageClassification_4Algorithons/inception_v3_google-1a9a5a14.pth"))
 
 prediction.setModelTypeAsDenseNet121()
-prediction.setModelPath(os.path.join(execution_path, "/Users/huanhuan/Document/03-Company/HardWare/Image_AI/ImageClassification_4Algorithons/densenet121-a639ec97.pth"))
+prediction.setModelPath(os.path.join(execution_path, "/Users/huanhuan/Document/03-Company/HardWare/Image_AI2/ImageClassification_4Algorithons/densenet121-a639ec97.pth"))
 
 prediction.loadModel()
 prediction.useCPU()
