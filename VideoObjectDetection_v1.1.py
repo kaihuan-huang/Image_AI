@@ -7,9 +7,7 @@ Here's how you can modify your code:
 
 2. **Set the Output Path**:
    Modify the `output_file_path` to include the new folder and the desired output file base name.
-
-Here's the updated code snippet:
-In this updated code, `output_directory` is set to the "Video Object DetectionOutPut" folder within the current execution path. The `output_file_path` in the `detectObjectsFromVideo` function is updated to use this new directory. 
+, `output_directory` is set to the "Video Object DetectionOutPut" folder within the current execution path. The `output_file_path` in the `detectObjectsFromVideo` function is updated to use this new directory. 
 
 Also, make sure that the specified paths in `execution_path` and `output_directory` are correct and accessible in your environment.'''
 
@@ -28,8 +26,8 @@ detector.setModelTypeAsRetinaNet()
 detector.setModelPath(os.path.join(execution_path, "/Users/huanhuan/Documents/03-Company/HardWare/ImageAI_v3/ObjectDetectionModel/retinanet_resnet50_fpn_coco-eeacb38b.pth"))
 detector.loadModel()
 
-input_video = os.path.join(execution_path, "data-videos/traffic.mp4")
-output_video = os.path.join(output_directory, "traffic_detected")
+input_video = os.path.join(execution_path, "data-videos/traffic-mini.mp4")
+output_video = os.path.join(output_directory, "traffic_detected_mini.mp4")
 
 video_path = detector.detectObjectsFromVideo(input_file_path=input_video,
                                               output_file_path=output_video,
