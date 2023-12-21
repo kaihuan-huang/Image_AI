@@ -33,8 +33,8 @@ model_path = os.path.join(execution_path, "/Users/huanhuan/Documents/03-Company/
 detector.setModelPath(model_path)
 detector.loadModel()
 
-input_video = os.path.join(execution_path, "Image_AI/data-videos/holo1.mp4")
-output_video = os.path.join(output_directory, "traffic-mini_detected")
+input_video = os.path.join(execution_path, "data-videos/Showing interior.mp4")
+output_video = os.path.join(output_directory, "Real Estate_Showing interior")
 
 # Detect objects in video
 video_path = detector.detectObjectsFromVideo(input_file_path=input_video,
@@ -47,7 +47,7 @@ cap = cv2.VideoCapture(video_path)
 while cap.isOpened():
     ret, frame = cap.read()
     if ret:
-        cv2.imshow('Video Object Detection holo v1.2', frame)
+        cv2.imshow('Video Object Detection Real Estate v1.2', frame)
         if cv2.waitKey(25) & 0xFF == ord('q'):
             break
     else:

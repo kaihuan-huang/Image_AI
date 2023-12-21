@@ -22,12 +22,22 @@ if not os.path.exists(output_directory):
     os.makedirs(output_directory)
 
 detector = VideoObjectDetection()
+
+# ModelTypeAsRetinaNet
+'''
 detector.setModelTypeAsRetinaNet()
 detector.setModelPath(os.path.join(execution_path, "/Users/huanhuan/Documents/03-Company/HardWare/ImageAI_v3/ObjectDetectionModel/retinanet_resnet50_fpn_coco-eeacb38b.pth"))
+'''
+
+# ModelTypeAsYOLOv3
+detector.setModelTypeAsYOLOv3()
+detector.setModelPath(os.path.join(execution_path, "/Users/huanhuan/Documents/03-Company/HardWare/ImageAI_v3/ObjectDetectionModel/retinanet_resnet50_fpn_coco-eeacb38b.pth"))
+
+detector.setModelPath(os.path.join(execution_path, "/Users/huanhuan/Documents/03-Company/HardWare/ImageAI_v3/VideoObjectDetectionModels/yolov3 (1).pt"))
 detector.loadModel()
 
-input_video = os.path.join(execution_path, "data-videos/traffic-mini.mp4")
-output_video = os.path.join(output_directory, "traffic_detected_mini.mp4")
+input_video = os.path.join(execution_path, "data-videos/Real Estate Agent Showing to a Young Couple.mp4")
+output_video = os.path.join(output_directory, "Agent Showing_detected_mini")
 
 video_path = detector.detectObjectsFromVideo(input_file_path=input_video,
                                               output_file_path=output_video,
